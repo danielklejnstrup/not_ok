@@ -1,0 +1,11 @@
+menu "WiFi Setup"
+    config WIFI_SSID
+        string "WiFi SSID"
+        help
+            The SSID of the wireless network
+
+    config WIFI_PASS
+        string "WiFi Password"
+        help
+            The password for the network
+endmenu

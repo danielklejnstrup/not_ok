@@ -7,7 +7,6 @@
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "nvs_flash.h"
-#include "wifi_credentials.h"  // Include the header file with WiFi credentials
 
 // Servo configuration
 #define SERVO_PIN 18
@@ -106,8 +105,8 @@ void wifi_init_sta() {
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = WIFI_SSID,
-            .password = WIFI_PASS,
+            .ssid = CONFIG_WIFI_SSID,
+            .password = CONFIG_WIFI_PASS,
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
         },
     };
